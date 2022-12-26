@@ -36,53 +36,53 @@ function Registration() {
                         <input id="repeat-password-input" minLength={6} type="password" name="pswd" placeholder=" Повтор пароля"/>
                     </div>
                     <div id="error-label"><p></p></div>
-                    <button onClick={checkInput} className="create-button">
+                    <button onClick={checkInput} className="create-button-mobile">
                         Создать учетную запись
                     </button>
-                    <p className="agreement">Создавая учетную запись, я принимаю условия <a>Пользовательского соглашения </a>
-                        и даю согласие на обработку моих персональных данных в соответствии с Федеральным законом
-                        XXXXXXX "О персональных данных".
+                    <p className="agreement-mobile">Регистрируя аккаунт, я принимаю условия <a href={"#"}>Пользовательского соглашения </a>
+                        и даю своё согласие на обработку моей персональной информации на условиях,
+                        определенных <a href={"#"}>Политикой конфиденциальности.</a>
                     </p>
                 </div>
             </div>
 
             <div className="reg-panel">
                 <div className="input-panel">
-                    <img src={pfp_icon} alt={""} />
-                    <span className={"input-text reg-label"}>
+                    <div className="reg-img-container">
+                        <img src={pfp_icon} alt={""} />
+                    </div>
+                    <div className="reg-span-container">
+                        <span className={"input-text reg-label"}>
                         Регистрация учетной записи
-                    </span>
-                    <span className={"input-text"}>
+                        </span>
+                        <span className={"input-text"}>
                         Заполните поля ниже
-                    </span>
+                        </span>
+                    </div>
                     <div className="input-fields-container">
                         <input type="text" name="txt" placeholder=" Имя пользователя " required=""/>
                         <input type="password" name="psw" placeholder=" Пароль" required=""/>
                         <input type="password" name="psw" placeholder=" Повтор пароля" required=""/>
                     </div>
-                    <button onClick={checkInput} className="create-button">
-                        Создать учетную запись
-                    </button>
-                    <p className="agreement">Создавая учетную запись, я принимаю условия <a>Пользовательского соглашения </a>
-                        и даю согласие на обработку моих персональных данных в соответствии с Федеральным законом
-                        XXXXXXX "О персональных данных".
-                    </p>
+                    <div className="reg-button-container">
+                        <button>Создать аккаунт</button>
+                    </div>
+                    <div className="reg-agreement">
+                        Регистрируя аккаунт, я принимаю условия <a href={"#"}>Пользовательского соглашения </a>
+                         и даю своё согласие на обработку моей персональной информации на условиях,
+                        определенных <a href={"#"}>Политикой конфиденциальности.</a>
+                    </div>
                 </div>
             </div>
             <div className="info">
                 <div className="reg-text-container">
                     <p className="reg-aside-product-name">
-                        PRODUCT NAME
+                        HEART CIRCUIT
                     </p>
-                    <p className="reg-aside-product-txt">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum."
+                    <p>
+                        Heart Circuit – это бесплатный веб-сервис позволяющий
+                        сегментировать медицинские изображения. Используя алгоритмы нейронных сетей,
+                        сервис позволяет обрабатывать снимки различной сложности.
                     </p>
                 </div>
             </div>

@@ -1,9 +1,11 @@
 import {useState} from "react";
 
+function startPy(){
+
+}
 
 function DropArea() {
     const [drag, setDrag] = useState(false)
-
 
     function dragStartHandler(e){
         e.preventDefault()
@@ -56,6 +58,7 @@ function DropArea() {
                 <input  type="file" id="file" multiple accept={"image/*"}/>
                 <label  htmlFor="file"> Выберете файлы для загрузки </label>
             </div>
+
         </div>
     );
 }

@@ -1,23 +1,31 @@
-import heart_img from'./img/heart.png'
-import down_arrow from './img/down_arrow.svg'
+import pfp_icon from "./img/pfp_icon.svg";
+import React from "react";
+import { useHistory } from 'react-router-dom';
+import {Link} from "react-router-dom";
 
 function Home() {
+    // const history=useHistory()
+    // function redirect(){
+    //     history.push("/registration")
+    //     this.forceUpdate()
+    // }
+
     return (
         <div className="home_base">
             <div className="home-mobile" >
                 <div className="text-label-mobile">
-                    PRODUCT<br/> NAME
+                    HEART <br/> <span className="label-part">CIRCUIT</span>
                 </div>
                 <div className="text-info-mobile">
                     <p className="text-content-mobile">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum."
+                        Heart Circuit – это бесплатный веб-сервис позволяющий
+                        сегментировать медицинские изображения. Используя алгоритмы нейронных сетей,
+                        сервис позволяет обрабатывать снимки различной сложности.
+                    </p>
+                    <p className="text-content-mobile">
+                        <br/>Нейронная сеть использует алгоритм Лукаса – Канаде
+                        и различные методы вычисления оптического потока,
+                        что позволяет добиться высокого качества получаемого результата.
                     </p>
                 </div>
             </div>
@@ -28,19 +36,34 @@ function Home() {
                         HEART <br/> <span className="label-part">CIRCUIT</span>
                     </div>
                     <div className="text-info">
-                        <p className="text-content">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."
+                        <p className="text-content-1">
+                            Heart Circuit – это бесплатный веб-сервис позволяющий
+                            сегментировать медицинские изображения. Используя алгоритмы нейронных сетей,
+                            сервис позволяет обрабатывать снимки различной сложности.
+                        </p>
+                        <p className="text-content-2">
+                            Нейронная сеть использует алгоритм Лукаса – Канаде
+                            и различные методы вычисления оптического потока,
+                            что позволяет добиться высокого качества получаемого результата. <span className="start-anchor"><a href="#drop-area">Начать сейчас</a></span>
                         </p>
                     </div>
                 </div>
-                <img className="png-container" src={heart_img} alt={""}/>
+                <div className="entrance-container">
+                    <div className="entrance-panel">
+                        <img className="entrance-pfp" src={pfp_icon} alt={"profile-picture"}/>
+                        <p className="entrance-label">Войти в учетную запись</p>
+                        <div className="entrance-fields">
+                            <input type="text" name="txt" placeholder="Имя пользователя" required=""/>
+                            <input type="password" name="psw" placeholder="Пароль" required=""/>
+                        </div>
+                        <button className="entrance-button">ВОЙТИ</button>
+                        <div className="anc-container">
+                            <p className="forget-password"> Нет аккаунта?</p>
+                            <a onClick={() => {window.location.href="/registration"}} color="black"> Зарегистрируйтесь сейчас </a>
+                        </div>
+                    </div>
+                </div>
+                {/*<img className="png-container" src={heart_img} alt={""}/>*/}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import pfp_icon from './img/pfp_icon.svg'
 
 function Entrance(props) {
     return (
-        <div className='entrance-container'>
+        <div className='entrance-container-page'>
             <div className="entrance-log-panel">
                 <div className="entrance-input-panel">
                     <img className="entrance-pfp-icon" src={pfp_icon} alt="img"/>
@@ -15,12 +15,12 @@ function Entrance(props) {
                     </div>
                     <a href="#" className="entrance-forget-psw">Забыли пароль?</a>
                     <button className="entrance-create-button">Войти</button>
-                    <p className="entrance-no-acc">Нет аккаунта?<a href="#"> Зарегистрироваться </a></p>
+                    <p className="entrance-no-acc">Нет аккаунта?<a onClick={() => {window.location.href="/registration"}}> Зарегистрироваться </a></p>
                 </div>
             </div>
             <div className="entrance-log-info">
                 <div className="entrance-log-text-container">
-                    <p className="entrance-log-aside-product-name">PRODUCT NAME</p>
+                    <p className="entrance-log-aside-product-name">HEART CIRCUIT</p>
                     <p className="entrance-log-aside-product-txt">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna
