@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch, useLocation} from "react-router-dom";
+import Header from './Header';
+import Home from "./Home";
+import DropArea from "./DropArea";
+import Footer from "./Footer"
+import Register from './Registration'
+import Entrance from './Enterance'
+import React from "react";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div className="App">
+              <Header/>
+              <div className="Content">
+                  <Switch>
+                      <Router exact path="/">
+                          <Home/>
+                          <DropArea/>
+                      </Router>
+                      <Router exact path="/registration">
+                          <Register/>
+                      </Router>
+                      <Router exact path="/entrance">
+                          <Entrance/>
+                      </Router>
+                  </Switch>
+              </div>
+              <Footer/>
+          </div>
+      </Router>
   );
 }
 
